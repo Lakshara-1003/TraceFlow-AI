@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TraceFlow AI</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <span>◈</span>
+            TraceFlow <b>AI</b>
+        </div>
+
+        <div class="header-status">
+            ● SYSTEM ACTIVE
+        </div>
+    </header>
+
+
+    <!-- Main Content -->
+    <main class="container">
+
+        <!-- Title -->
+        <section class="hero">
+            <p class="small-title">FINANCIAL NETWORK INTELLIGENCE</p>
+
+            <h1>
+                Trace Every Flow.<br>
+                Detect Every Connection.
+            </h1>
+
+            <p class="description">
+                AI-powered transaction traceability and circular
+                network detection system.
+            </p>
+        </section>
+
+
+        <!-- Dashboard Cards -->
+        <section class="stats">
+
+            <div class="stat-card">
+                <span>Total Transactions</span>
+                <h2 id="transactionCount">0</h2>
+            </div>
+
+            <div class="stat-card">
+                <span>Active Trace IDs</span>
+                <h2 id="traceCount">0</h2>
+            </div>
+
+            <div class="stat-card">
+                <span>Accounts Monitored</span>
+                <h2 id="accountCount">0</h2>
+            </div>
+
+            <div class="stat-card">
+                <span>Circular Flows</span>
+                <h2 id="circularCount">0</h2>
+            </div>
+
+        </section>
+
+
+        <!-- Transaction Input -->
+        <section class="panel">
+
+            <div class="panel-title">
+                <div>
+                    <p class="section-label">01 / TRANSACTION TRACKER</p>
+                    <h2>Create Transaction</h2>
+                </div>
+            </div>
+
+            <div class="form-grid">
+
+                <div class="input-group">
+                    <label>Sender Account</label>
+                    <input
+                        type="text"
+                        id="sender"
+                        placeholder="Example: A001">
+                </div>
+
+                <div class="input-group">
+                    <label>Receiver Account</label>
+                    <input
+                        type="text"
+                        id="receiver"
+                        placeholder="Example: B001">
+                </div>
+
+                <div class="input-group">
+                    <label>Amount</label>
+                    <input
+                        type="number"
+                        id="amount"
+                        placeholder="Example: 10000">
+                </div>
+
+                <div class="input-group button-area">
+                    <button onclick="createTransaction()">
+                        GENERATE TRACE ID
+                    </button>
+                </div>
+
+            </div>
+
+            <!-- Result -->
+            <div id="transactionResult" class="result-box">
+                <span>Trace ID</span>
+                <strong id="traceId">Waiting for transaction...</strong>
+            </div>
+
+        </section>
+
+
+        <!-- Network Section -->
+        <section class="panel">
+
+            <p class="section-label">02 / NETWORK VISUALIZATION</p>
+
+            <h2>Transaction Flow</h2>
+
+            <div class="network">
+
+                <div class="node">
+                    <div class="circle">A</div>
+                    <span>ACCOUNT A</span>
+                </div>
+
+                <div class="arrow">
+                    ₹10,000 →
+                </div>
+
+                <div class="node">
+                    <div class="circle">B</div>
+                    <span>ACCOUNT B</span>
+                </div>
+
+                <div class="arrow">
+                    ₹5,000 →
+                </div>
+
+                <div class="node">
+                    <div class="circle">C</div>
+                    <span>ACCOUNT C</span>
+                </div>
+
+                <div class="arrow">
+                    ↩ ₹4,500
+                </div>
+
+                <div class="node">
+                    <div class="circle">A</div>
+                    <span>RETURN</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- AI Analysis -->
+        <section class="panel analysis-panel">
+
+            <p class="section-label">03 / AI ANALYSIS</p>
+
+            <h2>Network Intelligence</h2>
+
+            <div class="analysis-grid">
+
+                <div>
+                    <span>Circular Flow</span>
+                    <strong class="detected">DETECTED</strong>
+                </div>
+
+                <div>
+                    <span>Connected Accounts</span>
+                    <strong>3</strong>
+                </div>
+
+                <div>
+                    <span>Original Amount</span>
+                    <strong>₹10,000</strong>
+                </div>
+
+                <div>
+                    <span>Investigation Status</span>
+                    <strong>REQUIRES REVIEW</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Transaction History -->
+        <section class="panel">
+
+            <p class="section-label">04 / TRANSACTION HISTORY</p>
+
+            <h2>Tracked Transactions</h2>
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Trace ID</th>
+                        <th>From</th>
+                        <th>To</th>
+                        <th>Amount</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+
+                <tbody id="transactionTable">
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        TRACEFLOW AI © 2026 — Financial Transaction Intelligence
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
